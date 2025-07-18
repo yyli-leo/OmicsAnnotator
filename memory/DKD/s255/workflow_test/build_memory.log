@@ -1,0 +1,80 @@
+2025-07-14 22:11:37,467 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:15:28,454 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:15:58,712 [INFO] Checkpoint saved: context
+2025-07-14 22:15:58,714 [INFO] Context ready.
+2025-07-14 22:19:00,442 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:19:12,610 [INFO] Resuming from checkpoint: context
+2025-07-14 22:19:29,596 [INFO] Checkpoint saved: context
+2025-07-14 22:19:29,596 [INFO] Context ready.
+2025-07-14 22:20:35,613 [INFO] Checkpoint saved: region_objs
+2025-07-14 22:20:44,447 [INFO] Checkpoint saved: scgp_outputs
+2025-07-14 22:23:20,044 [ERROR] Pipeline crashed: Task <Task pending name='Task-5' coro=<_runner() running at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/sync.py:119> cb=[_chain_future.<locals>._call_set_state() at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/asyncio/futures.py:394]> got Future <_GatheringFuture pending> attached to a different loop
+Traceback (most recent call last):
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_test.py", line 212, in <module>
+    main()
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_test.py", line 139, in main
+    summaries, cluster_ids = encoder.run_scgp(region_objs, scgp_outputs)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/agents/omics_encoder.py", line 75, in run_scgp
+    cell_morph_df = get_cell_morphology_df(self.region_id, self.root_dir)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/patchsum/cell_seg_info.py", line 23, in get_cell_morphology_df
+    seg_mask = zarr.open_array(seg_mask_path)[:]
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/array.py", line 2434, in __getitem__
+    return self.get_orthogonal_selection(pure_selection, fields=fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/_compat.py", line 43, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/array.py", line 2876, in get_orthogonal_selection
+    return sync(
+           ^^^^^
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/sync.py", line 163, in sync
+    raise return_result
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/sync.py", line 119, in _runner
+    return await coro
+           ^^^^^^^^^^
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/array.py", line 1290, in _get_selection
+    await self.codec_pipeline.read(
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/codec_pipeline.py", line 464, in read
+    await concurrent_map(
+  File "/autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/common.py", line 71, in concurrent_map
+    return await asyncio.gather(*[asyncio.ensure_future(run(item)) for item in items])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Task <Task pending name='Task-5' coro=<_runner() running at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/sync.py:119> cb=[_chain_future.<locals>._call_set_state() at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/asyncio/futures.py:394]> got Future <_GatheringFuture pending> attached to a different loop
+2025-07-14 22:23:20,500 [ERROR] Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<concurrent_map.<locals>.run() running at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/site-packages/zarr/core/common.py:67> cb=[gather.<locals>._done_callback() at /autofs/bal14/yyli/miniconda3/envs/ON/lib/python3.11/asyncio/tasks.py:754]>
+2025-07-14 22:25:25,553 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:25:25,560 [INFO] Test mode.
+2025-07-14 22:25:25,560 [INFO] Resuming from checkpoint: context
+2025-07-14 22:25:25,561 [INFO] Context ready.
+2025-07-14 22:25:25,561 [INFO] Resuming from checkpoint: region_objs
+2025-07-14 22:25:26,359 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-14 22:25:37,794 [INFO] Checkpoint saved: subset_vars
+2025-07-14 22:30:54,215 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:30:54,225 [INFO] Test mode.
+2025-07-14 22:30:54,225 [INFO] Resuming from checkpoint: context
+2025-07-14 22:30:54,226 [INFO] Context ready.
+2025-07-14 22:30:54,226 [INFO] Resuming from checkpoint: region_objs
+2025-07-14 22:30:55,244 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-14 22:30:55,248 [INFO] Resuming from checkpoint: subset_vars
+2025-07-14 22:30:55,271 [ERROR] Pipeline crashed: 'dict_items' object is not subscriptable
+Traceback (most recent call last):
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_test.py", line 213, in <module>
+    main()
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_test.py", line 157, in main
+    for ident, ctx in tqdm(list(subset_vars.items()[:1]), desc="LLM per ROI"):
+                                ~~~~~~~~~~~~~~~~~~~^^^^
+TypeError: 'dict_items' object is not subscriptable
+2025-07-14 22:31:16,747 [INFO] Logging to memory/DKD/s255/workflow_test/build_memory.log
+2025-07-14 22:31:16,752 [INFO] Test mode.
+2025-07-14 22:31:16,752 [INFO] Resuming from checkpoint: context
+2025-07-14 22:31:16,752 [INFO] Context ready.
+2025-07-14 22:31:16,753 [INFO] Resuming from checkpoint: region_objs
+2025-07-14 22:31:17,642 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-14 22:31:17,646 [INFO] Resuming from checkpoint: subset_vars
+2025-07-14 22:31:21,851 [INFO] Checkpoint saved: subset_io
+2025-07-14 22:31:26,197 [INFO] Checkpoint saved: outputs_by_cl
+2025-07-14 22:31:29,336 [INFO] Checkpoint saved: dr_dialogues
+2025-07-14 22:31:29,336 [INFO] All steps finished successfully.

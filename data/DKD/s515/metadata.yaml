@@ -1,0 +1,124 @@
+study_id: 515
+root_dir: /autofs/bal14/zqwu/mIF_data/s515
+
+tissue_types:
+  - Kidney
+
+major_phenotypes: >
+  Patients with diabetic nephropathy underwent kidney transplantation and experienced transplant rejection.
+
+biomarkers:
+  - CD11c
+  - CD31
+  - CD34
+  - CD3e
+  - CD4
+  - CD45
+  - CD68
+  - CD79a
+  - CD8
+  - Caveolin1
+  - CollagenIV
+  - ECad
+  - EpCAM
+  - DAPI
+  - Keratin8/18
+  - PanCK
+  - Podoplanin
+  - Vimentin
+  - aSMA
+
+functional_biomarkers:
+  - CD14
+  - CD141
+  - CD20
+  - CD21
+  - CD38
+  - CD45RO
+  - FoxP3
+  - GATA3
+  - Gal3
+  - HLA-A
+  - HLA-E
+  - GranzymeB
+  - HLA-DR
+  - ICOS
+  - IFNg
+  - Ki67
+  - LAG3
+  - PCNA
+  - PD1
+  - PDL1
+  - TIGIT
+  - VISTA
+  - ATM
+  - BCL2
+  - CD39
+  - CD40
+  - ERa
+  - IDO1
+  - CD163
+  - CD44
+  - CD66
+  - MPO
+  - TP63
+
+selected_acq_ids:
+  - s515_c001_v001_r003_reg004
+  - s515_c001_v001_r003_reg008
+  - s515_c001_v001_r003_reg012
+  - s515_c001_v001_r003_reg032
+  - s515_c001_v001_r003_reg038
+  - s515_c001_v001_r003_reg001
+  - s515_c001_v001_r003_reg002
+  - s515_c001_v001_r003_reg020
+  - s515_c001_v001_r003_reg026
+  - s515_c001_v001_r003_reg028
+  - s515_c001_v001_r003_reg036
+  - s515_c001_v001_r003_reg043
+
+diagnosis_dict: {}  # Add mappings if known
+
+cell_type_rename:
+  Cluster 0 - CD14+ CD163+ CD68+ Macrophages: Macrophages (CD14+ CD163+ CD68+)
+  Cluster 1 - CD3e+ CD8+ T cells: T cells (CD3e+ CD8+)
+  Cluster 2 - CD38+ IFNg+ cells: T cells (CD38+ IFNg+)
+  Cluster 3 - ECad+ Keratin+ tubule cells: Tubular cells (ECad+ Keratin+)
+  Cluster 4 - Keratin+ proximal tubule cells: Proximal tubular cells (Keratin+)
+  Cluster 5 - Keratin+ proximal tubule cells: Proximal tubular cells (Keratin+)
+  Cluster 6 - CD3e+ CD4+ T cells: T cells (CD3e+ CD4+)
+  Cluster 7 - CD31+ CD34+ aSMA+ interstitial / smooth muscle cells: Interstitial / smooth muscle cells (CD31+ CD34+ aSMA+)
+  Cluster 8 - CD31+ CD34+ Vimentin+ interstitial cells: Interstitial cells (CD31+ CD34+ Vimentin+)
+  Cluster 9 - other cells: Other cells
+  Cluster 10 - aSMA+ Vimentin+ fibroblasts: Fibroblasts (aSMA+ Vimentin+)
+  Cluster 11 - CD20+ B cells: B cells (CD20+)
+  Cluster 12 - ECad+ Keratin+ tubule cells: Tubular cells (ECad+ Keratin+)
+  Cluster 13 - ECad+ distal tubule cells: Distal tubular cells (ECad+)
+  Cluster 14 - Podoplanin+ CD34+ podocytes: Podocytes (Podoplanin+ CD34+)
+  Cluster 15 - CD66+ MPO+ cells: Immune cells (CD66+ MPO+)
+  Cluster 16 - CD45+ GATA3+ FoxP3+ cells: Immune cells (CD45+ GATA3+ FoxP3+)
+  Cluster 17 - CD68+ CD44+ cells: Immune cells (CD68+ CD44+)
+  Cluster 18 - CD34+ Podoplanin+ HLA-E+ endothelial cells: Podocytes (CD34+ Podoplanin+ HLA-E+)
+  Cluster 19 - Vimentin+ cells: Vimentin+ cells
+
+background: |
+  Make use of the following background information collected from the Human Protein Atlas:
+  ----------------
+  CD11c: Cytoplasmic expression in macrophages and cells in lymphoid tissues.
+  CD31: Distinct expression in endothelial cells and smooth muscle. Expressed in glomerular endothelial cells.
+  CD34: Selective cytoplasmic expression in endothelial cells. Expressed in glomerular endothelial cells and blood vessels.
+  CD3e: Selective cytoplasmic expression in T-cells.
+  CD4: Selective cytoplasmic expression in peripheral lymphocytes and subsets of cells in lymphoid tissues.
+  CD45: Selective cytoplasmic expression in lymphoid tissue and immune cells.
+  CD68: Selective cytoplasmic expression in macrophages.
+  CD79a: Distinct cytoplasmic expression mainly in lymphoid germinal centers and subsets of peripheral immune cells.
+  CD8: Cytoplasmic expression in subsets of immune cells.
+  Caveolin1: Distinct expression in endothelial cells, adipocytes, pneumocytes and basal cells of squamous epithelia. Expressed in blood vessels.
+  CollagenIV: Distinct membranous expression in various tissues, most prominent in smooth muscle, basal membranes, endothelium and connective tissue. Expressed in interstitium, mesangial matrix, Bowman's capsule.
+  ECad: Cytoplasmic and membranous expression in epithelial cells. Expressed in distal tubules and collecting ducts.
+  EpCAM: Cytoplasmic and membranous expression in epithelial cells. Expressed in collecting ducts (high) and distal tubules (low).
+  Keratin8/18: Cytoplasmic expression in epithelial cells. Expressed in renal tubules.
+  PanCK: Cytoplasmic expression in epithelial cells. Expressed in renal tubules.
+  Podoplanin: Distinct expression in alveoli, lymphatic vessels, placental and ovarian stroma, myoepithelium and basal cells of squamous epithelia. Expressed in glomerular podocytes
+  Vimentin: Distinct cytoplasmic and membranous expression in lymphoid tissues, astrocytes, mesenchymal cells, epidermal Langerhans cells and fractions of glandular cells. Expressed in glomeruli and blood vessels.
+  aSMA: Selective expression in smooth muscle cells and myoepithelial cells. Expressed in blood vessels and interstitium.

@@ -1,0 +1,51 @@
+agent: ContextCurator
+
+system:
+  input_variables: ["tissue_types", "major_phenotypes"]
+  template: |
+    You are a knowledgeable biological research assistant specializing in spatial omics and multiplexed immunofluorescence data analysis. Your task is to help study regions of interest (ROIs) within a tissue sample.
+
+    The tissue sample is derived from the following tissue types: {tissue_types}, and it has been collected from patients exhibiting these phenotypes: {major_phenotypes}.
+
+    A series of protein biomarkers were measured in this sample and the ROI, and these biomarkers were used to characterize cells and multi-cellular structures. Your primary responsibilities are:
+
+    1. To provide detailed knowledge about the roles and biological functions of the major biomarkers observed in the context of the specified tissues and phenotypes.
+    2. To explain how these proteins may indicate different structural components of the tissue types: {tissue_types}.
+    3. To annotate ROIs with your knowledge on the biomarkers, tissues, and the phenotypes of the patients: {major_phenotypes}.
+
+    Your responses should be informative, but avoid redundant repetition, use simple, concise language.
+
+user_structures:
+  input_variables: ["tissue_types", "major_phenotypes"]
+  template: |
+    First, I would like you to list all the major multicellular structures or spatial domains that are likely to appear in the data, given the tissue type(s): {tissue_types} and phenotype(s): {major_phenotypes}.
+
+    For each structure or domain, please provide the following details in the specified format:
+    - **Structure Name**: [Name of the structure or domain]
+    - **Role**: [Biological or functional role of this structure]
+    - **Composition of Cells**: [Types of cells typically found in this structure]
+    - **Major Biomarkers**: [Key protein biomarkers associated with this structure]
+
+    Format your response as follows:
+    [Structure Name 1]: [Role], [Composition of Cells], [Major Biomarkers]
+    [Structure Name 2]: [Role], [Composition of Cells], [Major Biomarkers]
+
+    List up to 8 and please ensure that the information is specific to the provided tissue types and phenotypes, and include any relevant biological context where appropriate.
+
+user_biomarkers:
+  input_variables: ["tissue_types", "major_phenotypes", "biomarker_list", "background"]
+  template: |
+    Next, here are the major biomarkers that were measured in the subject tissues of tissue type(s): {tissue_types} and phenotype(s): {major_phenotypes}:
+    {biomarker_list}
+    {background}
+
+    Given the structures you listed above, please provide the following details for each biomarker in the specified format:
+    - **Biomarker Name**: [Name and alternative names of the biomarker]
+    - **Structure(s) Luocalization**: [Strcture(s) where this biomarker may be observed]
+    - **Cell Type**: [Types of cell(s) where this biomarker may be observed]
+
+    Format your response as follows:
+    [Biomarker Name1]: Major, [Structure(s) Localization]; Secondary, [Structure(s) Localization]; Appear in [Cell Type]
+    [Biomarker Name2]: Major, [Structure(s) Localization]; Secondary, [Structure(s) Localization]; Appear in [Cell Type]
+
+    Please ensure that the information is specific to the provided tissue types and phenotypes, and avoid redundant repetition, use simple, concise language.

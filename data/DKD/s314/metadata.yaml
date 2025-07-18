@@ -1,0 +1,96 @@
+study_id: 314
+root_dir: /autofs/bal14/zqwu/mIF_data/s314
+
+tissue_types:
+  - Kidney
+
+major_phenotypes: >
+  Kidney-transplant patients with T-cell-mediated rejection or antibody-mediated
+  rejection. They exhibited varied HLA mismatches, desensitization, chronic
+  antibody-mediated rejection, and diverse renal function and pathology outcomes.
+
+biomarkers:
+  - CD11b
+  - CD11c
+  - CD14
+  - CD183
+  - CD31
+  - CD34
+  - CD3e
+  - CD4
+  - CD45
+  - CD68
+  - CD8
+  - DAPI
+  - PGP9.5
+  - PanCK
+  - Podoplanin
+  - Vimentin
+  - aSMA
+
+functional_biomarkers:
+  - C4d
+  - CD107a
+  - CD117
+  - CD134
+  - CD141
+  - CD15
+  - CD197
+  - CD20
+  - CD21
+  - CD38
+  - CD45RA
+  - CD45RO
+  - CD56
+  - FoxP3
+  - GATA3
+  - GranzymeB
+  - HLA-DR
+  - ICOS
+  - Ki67
+  - PD1
+  - PDL1
+  - RORgammaT
+  - Siglec8
+  - Tbet
+
+selected_acq_ids:
+  - s314_c001_v001_r001_reg002
+  - s314_c001_v001_r001_reg003
+  - s314_c001_v001_r001_reg004
+
+diagnosis_dict: {}  # add key–value pairs when available
+
+cell_type_rename:
+  Endothelial: Endothelial cells
+  Podocytes: Podocytes
+  Stromal cells: Stromal cells
+  Prox. tube: Tubular cells
+  Dist. tube: Distal tubular cells
+  Duct: Duct cells
+  B cells: B cells
+  Tregs: Tregs
+  CD4 T cells: CD4 T cells
+  CD8 T cells: CD8 T cells
+  Macrophages: Macrophages
+  non-specific: Non-specific cells
+
+background: |
+  Make use of the following background information collected from the Human Protein Atlas:
+  ----------------
+  CD11b: Selective cytoplasmic expression in subset of immune cells and glial cells. Expressed in monocytes and granulocytes
+  CD11c: Cytoplasmic expression in macrophages and cells in lymphoid tissues.
+  CD14: Selective expression in subsets of immune cells.
+  CXCR3 (CD183): Expressed in proximal tubules, also expressed in distal convoluted tubules and collecting ducts
+  CD31: Distinct expression in endothelial cells and smooth muscle. Expressed in glomerular endothelial cells, blood vessels and interstitium.
+  CD34: Selective cytoplasmic expression in endothelial cells. Expressed in glomerular endothelial cells, blood vessels and interstitium.
+  CD3e: Selective cytoplasmic expression in T-cells.
+  CD4: Selective cytoplasmic expression in peripheral lymphocytes and subsets of cells in lymphoid tissues.
+  CD45: Selective cytoplasmic expression in lymphoid tissue and immune cells.
+  CD68: Selective cytoplasmic expression in macrophages.
+  CD8: Cytoplasmic expression in subsets of immune cells.
+  PGP9.5: Selective expression in CNS, distal renal tubules, islets of Langerhans and spermatogonia in testis. Expressed in distal tubules and collecting duct cells.
+  PanCK: Cytoplasmic expression in epithelial cells. Expressed in tubular epithelium.
+  Podoplanin: Distinct expression in alveoli, lymphatic vessels, placental and ovarian stroma, myoepithelium and basal cells of squamous epithelia. Expressed in glomerular podocytes
+  Vimentin: Distinct cytoplasmic and membranous expression in lymphoid tissues, astrocytes, mesenchymal cells, epidermal Langerhans cells and fractions of glandular cells. Expressed in glomeruli and interstitial space.
+  aSMA: Selective expression in smooth muscle cells and myoepithelial cells. Expressed in blood vessels and interstitium.

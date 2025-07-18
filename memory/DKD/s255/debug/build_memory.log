@@ -1,0 +1,62 @@
+2025-07-15 19:35:44,409 [INFO] Logging to memory/DKD/s255/debug/build_memory.log
+2025-07-15 19:35:44,416 [INFO] Test mode.
+2025-07-15 19:35:55,779 [INFO] Checkpoint saved: context
+2025-07-15 19:35:55,779 [INFO] Context ready.
+2025-07-15 19:36:17,839 [INFO] Checkpoint saved: region_objs
+2025-07-15 19:36:22,008 [INFO] Checkpoint saved: scgp_outputs
+2025-07-15 19:36:22,018 [ERROR] Pipeline crashed: OmicsEncoder() takes no arguments
+Traceback (most recent call last):
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_debug.py", line 208, in <module>
+    main()
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_debug.py", line 134, in main
+    encoder = OmicsEncoder(region_id, root_dir, biomarkers, cell_type_rename)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OmicsEncoder() takes no arguments
+2025-07-15 19:37:18,415 [INFO] Logging to memory/DKD/s255/debug/build_memory.log
+2025-07-15 19:37:18,421 [INFO] Test mode.
+2025-07-15 19:37:18,422 [INFO] Resuming from checkpoint: context
+2025-07-15 19:37:18,422 [INFO] Context ready.
+2025-07-15 19:37:18,422 [INFO] Resuming from checkpoint: region_objs
+2025-07-15 19:37:19,080 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-15 19:37:19,095 [ERROR] Pipeline crashed: Segmentation mask file not found: /autofs/bal14/yyli/projects/OmicsNavigator/data/DKD/s255/s255_c001_v001_r001_reg002/seg_mask
+Traceback (most recent call last):
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_debug.py", line 216, in <module>
+    main()
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/auto_workflow_debug.py", line 136, in main
+    summaries, cluster_ids = encoder.run_scgp(
+                             ^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/agents/omics_encoder.py", line 160, in run_scgp
+    cell_morph_df = get_cell_morphology_df(region_id, root_dir)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/patchsum/cell_seg_info.py", line 22, in get_cell_morphology_df
+    assert os.path.exists(seg_mask_path), f'Segmentation mask file not found: {seg_mask_path}'
+AssertionError: Segmentation mask file not found: /autofs/bal14/yyli/projects/OmicsNavigator/data/DKD/s255/s255_c001_v001_r001_reg002/seg_mask
+2025-07-15 19:44:47,129 [INFO] Logging to memory/DKD/s255/debug/build_memory.log
+2025-07-15 19:44:47,136 [INFO] Test mode.
+2025-07-15 19:44:47,136 [INFO] Resuming from checkpoint: context
+2025-07-15 19:44:47,137 [INFO] Context ready.
+2025-07-15 19:44:47,137 [INFO] Resuming from checkpoint: region_objs
+2025-07-15 19:44:47,889 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-15 19:44:59,605 [INFO] Checkpoint saved: subset_vars
+2025-07-15 19:46:09,977 [INFO] Checkpoint saved: subset_io
+2025-07-15 19:46:33,230 [INFO] Checkpoint saved: subset_io
+2025-07-15 19:46:40,100 [INFO] Checkpoint saved: outputs_by_cl
+2025-07-15 19:48:47,782 [INFO] Logging to memory/DKD/s255/debug/build_memory.log
+2025-07-15 19:48:47,789 [INFO] Test mode.
+2025-07-15 19:48:47,789 [INFO] Resuming from checkpoint: context
+2025-07-15 19:48:47,790 [INFO] Context ready.
+2025-07-15 19:48:47,790 [INFO] Resuming from checkpoint: region_objs
+2025-07-15 19:48:48,533 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-15 19:48:48,537 [INFO] Resuming from checkpoint: subset_vars
+2025-07-15 19:50:09,144 [INFO] Checkpoint saved: subset_io
+2025-07-15 19:51:01,972 [INFO] Logging to memory/DKD/s255/debug/build_memory.log
+2025-07-15 19:51:01,978 [INFO] Test mode.
+2025-07-15 19:51:01,978 [INFO] Resuming from checkpoint: context
+2025-07-15 19:51:01,979 [INFO] Context ready.
+2025-07-15 19:51:01,979 [INFO] Resuming from checkpoint: region_objs
+2025-07-15 19:51:02,744 [INFO] Resuming from checkpoint: scgp_outputs
+2025-07-15 19:51:02,748 [INFO] Resuming from checkpoint: subset_vars
+2025-07-15 19:51:06,587 [INFO] Checkpoint saved: subset_io
+2025-07-15 19:51:06,588 [INFO] Resuming from checkpoint: outputs_by_cl
+2025-07-15 19:51:09,233 [INFO] Checkpoint saved: dr_dialogues
+2025-07-15 19:51:09,233 [INFO] All steps finished successfully.

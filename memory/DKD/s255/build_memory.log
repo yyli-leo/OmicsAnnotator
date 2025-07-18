@@ -1,0 +1,10 @@
+2025-07-14 22:06:28,336 [INFO] Logging to memory/DKD/s255/build_memory.log
+2025-07-14 22:06:28,337 [ERROR] Pipeline crashed: [Errno 21] Is a directory: 'data/DKD/s255'
+Traceback (most recent call last):
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/aauto_workflow_test.py", line 211, in <module>
+    main()
+  File "/autofs/bal14/yyli/projects/OmicsNavigator/aauto_workflow_test.py", line 97, in main
+    meta = yaml.safe_load(open(args.meta_path, "r"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: 'data/DKD/s255'
+2025-07-14 22:10:19,541 [INFO] Logging to memory/DKD/s255/build_memory.log

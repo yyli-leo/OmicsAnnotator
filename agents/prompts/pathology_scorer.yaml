@@ -1,0 +1,46 @@
+agent: PathologyScorer
+
+system:
+  input_variables: ["tissue_types", "major_phenotypes"]
+  template: |
+    You are a knowledgeable biological research assistant specializing in spatial omics and multiplexed immunofluorescence data analysis. Your task is to help study regions of interest (ROIs) within a tissue sample.
+
+    The tissue sample is derived from the following tissue types: {tissue_types}, and it has been collected from patients exhibiting these phenotypes: {major_phenotypes}.
+
+    A series of protein biomarkers were measured in this sample and the ROI, and these biomarkers were used to characterize cells and multi-cellular structures. Your primary responsibility is to annotate ROIs with the provided context and your knowledge on the biomarkers, tissues, and the phenotypes.
+
+    Your responses should be informative, simple, and concise.
+
+user_final_input:
+  input_variables: ["diagnosis", "phenotype_desc"]
+  template: |
+This group of cells came from a patient with the specific diagnosis of **{diagnosis}**. This phenotype is described as follows:
+    ===
+    {phenotype_desc}
+    ===
+
+    Please analyze the contents of the ROI in relevance to the phenotype, make use of the inferred structures, as well as the biological and disease context above.
+
+    Be aware that the observed data might not reflect the diagnosis and phenotype description, as they might come from normal tissues in the ROI. You may state that the observed data does not provide any evidence for the diagnosis or phenotype.
+
+user_instruction:
+  input_variables: []
+  template: |
+    **Instruction:**
+    Please format your response using the structure below:
+
+    ```
+    **Phenotype-driven interpretation**:
+       [Phenotype], [Relevance score]
+       1. [Phenotype-associated evidence]
+       ...
+
+    [Other Notable Features]
+    ```
+
+    **Content Guidelines:**
+    - **Phenotype**: Re-state the patient's phenotype. This should be a very concise summary.
+    - **Relevance score**: Provide a score from 0 to 100 on how the observation of this ROI could be relevant to the diagnosis of the patient, where 0 indicates no relevance and 100 indicates high relevance.
+    - **Phenotype-associated evidence**: Provide in bullet points summary of how the observed data relates to the patient's phenotype. Focus on linking the observed data (e.g., biomarker levels, cell types, spatial metrics) to the inferred structure and the patient's phenotype. Provide specific, evidence-based reasoning. Do not include speculations that are not relevant to the observed data or structures. Again, there is chance that the observed data DOES NOT reflect the diagnosis and phenotype description. Only include evidence that you are highly confident about.
+    - **Other Notable Features**: Briefly list up to **two** additional observations or features that are unusual. Keep this section concise.
+    - Do not include the placeholder names in your response, and ensure that the content is specific to the provided data. Avoid redundant repetition and use simple, concise language.

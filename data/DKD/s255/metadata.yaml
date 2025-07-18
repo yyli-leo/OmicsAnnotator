@@ -1,0 +1,111 @@
+study_id: 255
+
+root_dir: /autofs/bal14/zqwu/mIF_data/s255
+#root_dir: /autofs/bal14/yyli/projects/OmicsNavigator/data/DKD/s255
+
+tissue_types:
+  - Kidney
+
+major_phenotypes: "Healthy, Diabetic Mellitus, Diabetic Kidney Disease"
+
+biomarkers:
+  - CD183
+  - VWF
+  - CD227
+  - EpCAM
+  - CD196
+  - Nestin
+  - CD31
+  - aSMA
+  - Perlecan
+  - CollagenIV
+  - CD141
+  - CD45
+  - CD68
+  - CD11b
+
+functional_biomarkers:
+  - SPP1
+  - TFAM
+  - bCatenin1
+  - RORgammaT
+  - CD25
+  - CD107a
+  - C1QC
+
+selected_acq_ids:
+  - s255_c001_v001_r001_reg002
+  - s255_c001_v001_r001_reg003
+  - s255_c001_v001_r001_reg004
+  - s255_c001_v001_r001_reg005
+  - s255_c001_v001_r001_reg009
+  - s255_c001_v001_r001_reg010
+  - s255_c001_v001_r001_reg011
+  - s255_c001_v001_r001_reg012
+  - s255_c001_v001_r001_reg013
+  - s255_c001_v001_r001_reg014
+  - s255_c001_v001_r001_reg015
+  - s255_c001_v001_r001_reg016
+  - s255_c001_v001_r001_reg017
+  - s255_c001_v001_r001_reg019
+  - s255_c001_v001_r001_reg020
+  - s255_c001_v001_r001_reg022
+  - s255_c001_v001_r001_reg023
+
+diagnosis_dict:
+  s255_c001_v001_r001_reg002: DM
+  s255_c001_v001_r001_reg003: DKD2B
+  s255_c001_v001_r001_reg004: DKD2A->B
+  s255_c001_v001_r001_reg005: DKD3
+  s255_c001_v001_r001_reg009: DKD2B
+  s255_c001_v001_r001_reg010: DKD2B
+  s255_c001_v001_r001_reg011: DKD2A->B
+  s255_c001_v001_r001_reg012: DM
+  s255_c001_v001_r001_reg013: DM
+  s255_c001_v001_r001_reg014: DM
+  s255_c001_v001_r001_reg015: DM
+  s255_c001_v001_r001_reg016: DKD2A
+  s255_c001_v001_r001_reg017: DKD2A->B
+  s255_c001_v001_r001_reg019: DKD2A
+  s255_c001_v001_r001_reg020: DM
+  s255_c001_v001_r001_reg022: DKD2B
+  s255_c001_v001_r001_reg023: DM
+
+cell_type_rename:
+  Basement membrane (collagenIV+/Perlecan+): Basement membrane cell (CollagenIV+/Perlecan+)
+  Distal tubules (CD183+/CD227+): Distal tubular cells (CD227+)
+  Proximal tubules (CD183++/CD227-): Tubular cells (CD183++/CD227-)
+  VSMCs (aSMA+): Smooth muscle cells (aSMA+)
+  Nestin+ cells (nestin+): Nestin+ cells (nestin+)
+  Endothelial cells (CD31+): Endothelial cells (CD31+)
+  Endothelial cells (CD31+/CD196+): Endothelial cells (CD31+/CD196+)
+  Immune cells (CD45+): Immune cells (CD45+)
+  Macrophages (CD45+/CD68+): Immune cells (CD45+/CD68+)
+  Myeloid cells (CD45+/CD11b+): Immune cells (CD45+/CD11b+)
+  Low expressing cells: Low expressing cells
+
+background: |
+  Make use of the following background information provided by a human expert:
+
+  | Protein | Prior data | Human Protein Atlas | Our data | Conclusion for DM |
+  |---------|------------|---------------------|----------|-------------------|
+  | aSMA (ACTA2) | Interstitium, blood vessels | 3/3 mAbs interstitial, BVs, 1/3 some proximal tubular stain | Blood vessels and interstitium | Blood vessels and interstitium |
+  | C1QC |  Interstitial/immune cells [13], Glomeruli, arterioles [14] | All tubules with variations | Proximal tubules >> Distal Nephron 2 | Proximal tubules >> Distal Nephron 2 |
+  | CCR6 (CD196) | Glomerular Endothelial Cells (GEC) and PeriTubular Capillary endothelial cells (PTC)[31] | Glomeruli, Peritubular capillaries | Glomeruli, Peritubular capillaries | Glomeruli, Peritubular capillaries |
+  | CD11b | Monocytes and granulocytes[32, 33] | Individual tissue resident cells | Monocytes and granulocytes | Monocytes and granulocytes |
+  | CD31 | Glomeruli, venules, arteries > capillaries[34] | Glomeruli, venules, capillaries | Glomeruli, venules, arteries, capillaries | Glomeruli, venules, arteries, capillaries |
+  | CD45 | All hematopoietic cells except erythrocytes [35] | All hematopoietic cells except erythrocytes | All hematopoietic cells except erythrocytes | All hematopoietic cells except erythrocytes |
+  | CD68 | Monocytes[13] and macrophages [36] | Not detected (individual cells visible, however.) | Monocytes and granulocytes | Monocytes and granulocytes |
+  | Collagen IV | basement membrane, mesangial matrix, Bowman's capsule | (4A1, 2) Mesangial matrix, Bowman's capsule, tubular basement membrane, Glomerular basement membrane | basement membrane, interstitium, mesangial matrix, Bowman's capsule | Interstitium, mesangial matrix, Bowman's capsule |
+  | CTNBB1 | Proximal tubules, thin + thick ascending limbs, distal convoluted tubules, collecting duct.[38] | Tubular epithelia | All tubular epithelia | All tubular epithelia |
+  | CXCR3 (CD183) | mRNA from micro-dissected human proximal tubules (and rat IHC) [11], none [5-7], vascular smooth muscle cells,[8, 10] endothelial cells,[8] afferent arteriole, low level glomerular cells,[10] proximal, distal convoluted, low grade in gloms, Collecting tubule in medulla | One mAb used- no expression detected | Proximal and distal convoluted tubules, collecting ducts | Proximal and distal convoluted tubules, collecting ducts |
+  | EpCAM | Distal convoluted tubule ~ Loop of Henle > Collecting duct.[39] Distal convoluted tubule > Collecting duct.[40] Collecting duct > Distal convoluted tubule,[41] cortical collecting duct[42] | Collecting duct >>> Distal tubules | Collecting duct >>> Distal tubules | Collecting duct >>> Distal tubules |
+  | HSPG2 (perlecan) | Blood vessels (arterioles,[43] arteries [44]), basement membrane | Arteries, arterioles, glomerular vascular pole (3/4) low-medium ubiquitous expression (3/4) | Blood vessels, tubular basement membrane, weak glomerular basement membrane and mesangial matrix | Blood vessels, tubular basement membrane, weak glomerular basement membrane |
+  | LAMP1 (CD107a) | Ubiquitous [45] | Ubiquitous | Ubiquitous | Ubiquitous |
+  | mtTFA | All tubules, none in gloms [46] | All tubules | All tubules | All tubules |
+  | MUC1 (CD227) | Distal convoluted tubule, collecting duct.[47, 48] | Distal convoluted tubule, collecting duct | Distal convoluted tubule, collecting duct | Distal convoluted tubule, collecting duct |
+  | Nestin | Glomerular podocytes.[25, 26] | Glomerular podocytes, peritubular capillaries, endothelium, low level in proximal tubules (1/4 Abs) | Podocytes in glomeruli, small medullary vessels | Podocytes in glomeruli, small medullary vessels |
+  | RORgamma | RORgamma isoform 1 mRNA is expressed in kidneys.[17-19] This mAb recognizes both isoforms but is commercially defined as identifying RORgammaT because that is the only isoform in immune cells. No data on protein. | No expression | Ubiquitous nuclear expression | Ubiquitous nuclear expression |
+  | SPP1 (OPN) | Thick ascending LH,[21] distal convoluted tubules,[21- 23] collecting duct,[22, 23] some proximal tubules.[22] | Proximal and distal convoluted tubules | Proximal and distal convoluted tubules, collecting ducts | Proximal and distal convoluted tubules, collecting ducts |
+  | TM (CD141) | Weak & segmental in glomerular vesels, stronger in peritubular capillaries.[49] Vascular pole of glomerulus, reduced in glomeruli of people with DM.[12] Glomerular vascular pole, peritubular capillaries.[50] | Peritubular capillaries, glomerular vascular pole, blood vessels | Peritubular capillaries, blood vessels | Peritubular capillaries, blood vessels. Staining in glom vascular pole reduced due to DM in our samples. |
+  | vWF | Venules, arterioles, capillaries.[34]| Reported as not detected but is visible in venules and arterioles | High intensity staining in venules, arterioles and arteries. Low grade staining in parenchyma | Venules, arterioles, capillaries |
